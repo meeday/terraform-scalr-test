@@ -37,7 +37,7 @@ terraform {
     key    = "global/s3/terraform.tfstate"
     region = "eu-west-2"
     # Replace this with your DynamoDB table name!
-    dynamodb_table = "terraform-up-and-running-locks"
+    dynamodb_table = "terraform-env0-locks"
     encrypt        = true
   }
 }
