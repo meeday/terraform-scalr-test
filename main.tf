@@ -1,5 +1,5 @@
 provider "aws" {
-  profile = "sandbox"
+  profile = "scalr_test"
   region  = "eu-west-2"
 }
 
@@ -37,7 +37,7 @@ terraform {
     bucket  = "terraform-scalr-test"
     key     = "global/s3/terraform.tfstate"
     region  = "eu-west-2"
-    profile = "sandbox"
+    profile = "scalr_test"
     # Replace this with your DynamoDB table name!
     dynamodb_table = "terraform-up-and-running-locks"
     encrypt        = true
