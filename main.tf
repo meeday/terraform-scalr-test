@@ -20,6 +20,11 @@ resource "aws_dynamodb_table" "terraform_locks" {
   }
 }
 
+resource "aws_s3_bucket" "test" {
+  bucket = "s3-test-meeday"
+
+}
+
 
 terraform {
   backend "s3" {
