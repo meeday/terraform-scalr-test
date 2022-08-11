@@ -5,13 +5,8 @@ provider "aws" {
 resource "aws_s3_bucket_versioning" "terraform_state" {
   bucket = "meeday-terraform-env0-example"
 
-  # Enable server-side encryption by default
-  server_side_encryption_configuration {
-    rule {
-      apply_server_side_encryption_by_default {
-        sse_algorithm = "AES256"
-      }
-    }
+  versioning_configuration {
+    status = "Enabled"
   }
 }
 
