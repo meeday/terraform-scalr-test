@@ -4,11 +4,7 @@ provider "aws" {
 
 resource "aws_s3_bucket_versioning" "terraform_state" {
   bucket = "meeday-terraform-env0-example"
-  # Enable versioning so we can see the full revision history of our
-  # state files
-  versioning {
-    enabled = true
-  }
+
   # Enable server-side encryption by default
   server_side_encryption_configuration {
     rule {
