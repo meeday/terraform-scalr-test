@@ -2,8 +2,8 @@ provider "aws" {
   region = "eu-west-2"
 }
 
-resource "aws_s3_bucket" "terraform_state" {
-  bucket = "terraform-env0-test"
+resource "aws_s3_bucket_versioning" "terraform_state" {
+  bucket = "meeday-terraform-env0-example"
   # Enable versioning so we can see the full revision history of our
   # state files
   versioning {
